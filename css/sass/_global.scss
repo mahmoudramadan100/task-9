@@ -7,9 +7,11 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
-    background-color: #F9FAFF;
+    // background-color: #F9FAFF;
+    background-color: var(--bg-dark);
     margin: 0;
     padding: 0;
+    transition: all 0.2s;
 }
 
 a {
