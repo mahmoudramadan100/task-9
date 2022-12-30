@@ -19,11 +19,11 @@ app.onclick = function() {
 
 
 
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        document.documentElement.setAttribute("data-theme", "dark");
+        if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.setAttribute("data-theme", "light");
         checkbox.checked = true;
         } else {
-        document.documentElement.setAttribute("data-theme", "light");
+        document.documentElement.setAttribute("data-theme", "dark");
         checkbox.checked = false;
         }
 
@@ -31,6 +31,6 @@ app.onclick = function() {
         checkbox.addEventListener("change", (cb) => {
         document.documentElement.setAttribute(
             "data-theme",
-            cb.target.checked ? "dark" : "light"
+            cb.target.checked ? "light" : "dark"
         );
         });
