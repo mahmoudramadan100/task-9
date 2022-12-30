@@ -10,6 +10,7 @@ $icon-color: $icon-color;
 html[data-theme="light"] {
   --color-text: #{$onyx};
   --color-background: #{$cultured};
+  $icon-color: $white-color;
 }
 
 html[data-theme="dark"] {

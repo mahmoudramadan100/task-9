@@ -3,6 +3,8 @@ let app = document.querySelector('.applications');
 let navSmall = document.querySelector('.small-menu');
 let showMenu = document.querySelector('.show-menu');
 let arrow = document.querySelector('.arrow');
+let checkbox = document.querySelector("input[name=theme_switch]");
+const toggleSidebar = () => document.body.classList.toggle("open");
 
 
 
@@ -16,30 +18,19 @@ app.onclick = function() {
 }
 
 
-// const toggleMenuOpen = () => document.body.classList.toggle("open");
-const toggleSidebar = () => document.body.classList.toggle("open");
 
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        checkbox.checked = true;
+        } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        checkbox.checked = false;
+        }
 
-
-
-// var likeIcon = document.getElementById('#like-icon');
-// var dislike = document.getElementById('#dislike');
-
-
-// likeIcon.addEventListener('click', function() {
-  
-//     if (dislike.classList.contains('main-color')) {
-//         dislike.classList.remove('gray-color');
-//     } 
-//   this.classList.toggle('main-color');
-  
-// });
-
-// dislike.addEventListener('click', function() {
-  
-//     if (likeIcon.classList.contains('main-color')) {
-//         likeIcon.classList.remove('gray-color');
-//     } 
-//   this.classList.toggle('main-color');
-  
-// });
+        // switch theme if checkbox is engaged
+        checkbox.addEventListener("change", (cb) => {
+        document.documentElement.setAttribute(
+            "data-theme",
+            cb.target.checked ? "dark" : "light"
+        );
+        });
