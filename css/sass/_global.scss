@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #F9FAFF;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+        }
+    }

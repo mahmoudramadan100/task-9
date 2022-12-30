@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="sty;esheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body class="open">
+        <aside class="sidebar">
+            <div class="sidebar-inner">
+                <header class="sidebar-header">
+                    <button type="button" class="sidebar-burger" onclick="toggleSidebar()"></button>
+                    <img src="img/blocklord-logo.png" class="sidebar-logo"/>
+                </header>
+                <ul class="sidebar-nav">
+                    <li class="dashboard-list">
+                        <img src="img/icon-home.svg"/>
+                        <span>dashboard
+                        </span>
+                        <span class="arrow"></></span>
+                        <ul class="small-menu">
+                            <li style="animation-delay: 0.3s">
+                                <a href="#">classic</a>
+                            </li>
+                            <li>
+                                <a href="#">minimal</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/pages.svg"/>
+                        <span style="animation-delay: 0.1s">pages</span>
+                        <i class="arrow"></i>
+                    </li>
+                    <li class="applications">
+                        <img src="img/apps.svg"/>
+                        <span style="animation-delay: 0.2s">
+                            applications
+                        </span>
+                        <i class="arrow"></i>
+                        <ul class="show-menu">
+                            <li>
+                                <a href="#">about</a>
+                            </li>
+                            <li>
+                                <a href="#">info</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/ui.svg"/>
+                        <span style="animation-delay: 0.3s">ui componrnt</span>
+                        <i class="arrow"></i>
+                    </li>
+                    <li>
+                        <img src="img/widgest.svg"/>
+                        <span style="animation-delay: 0.3s">widgets</span>
+                        <i class="arrow"></i>
+                    </li>
+                    <li>
+                        <img src="img/forms.svg"/>
+                        <span style="animation-delay: 0.3s">forms</span>
+                        <i class="arrow"></i>
+                    </li>
+                    <li>
+                        <img src="img/chart.svg"/>
+                        <span style="animation-delay: 0.3s">charts</span>
+                        <i class="arrow"></i>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <div class="navbar">
+                <div class="container">
+                    <input type="checkbox" name="theme_switch" id="switch">
+                    <div class="search">
+                        <i class="fas fa-search icon-search"></i>
+                        <input type="search" name="" id="" placeholder="Search Here....">
+                    </div>
+                    <div class="user">
+                        <div class="icon">
+                            <!-- <img src="img/bell.png" alt=""> -->
+                            <i class="far fa-bell"></i>
+                        </div>
+                        <div class="icon">
+                            <!-- <img src="img/chat.png" alt=""> -->
+                            <i class="far fa-comment-dots"></i>
+                            <span class="point"></span>
+                        </div>
+                        <div class="avatar">
+                            <img src="img/man.png" alt="">
+                            <span class="point"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dash">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box box box-1"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box box-2"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box box box-3"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box box box-4"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="box box-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/fontawesome.min.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+          let checkbox = document.querySelector("input[name=theme_switch]");
+
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        checkbox.checked = true;
+        } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        checkbox.checked = false;
+        }
+
+        // switch theme if checkbox is engaged
+        checkbox.addEventListener("change", (cb) => {
+        document.documentElement.setAttribute(
+            "data-theme",
+            cb.target.checked ? "dark" : "light"
+        );
+        });
+
+        </script>
+    </body>
+</html>
