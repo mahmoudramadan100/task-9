@@ -693,8 +693,8 @@ body.open .main {
 
 .btn-theme {
   position: fixed;
-  bottom: 50px;
-  left: 50px;
+  bottom: 30px;
+  left: 25px;
   cursor: pointer;
 }
 
@@ -706,6 +706,7 @@ input#switch {
   right: -11px;
   z-index: 99;
   opacity: 0;
+  cursor: pointer;
 }
 
 .label {
@@ -719,6 +720,7 @@ input#switch {
   padding: 5px;
   position: relative;
   transform: scale(1.5);
+  cursor: pointer;
 }
 
 .ball {
